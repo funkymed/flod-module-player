@@ -1,0 +1,15 @@
+{
+  "name": "funkymed-flod-module-player",
+  "version": "1.0.0",
+  "description": "ES6 version of flod's module-player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funkymed/flod-module-player/issues"
+  },
+  "homepage": "https://github.com/funkymed/flod-module-player#readme"
+}
