@@ -233,6 +233,7 @@ export function CorePlayer() {
   var o = Object.create(null, {
     context: { value: null, writable: true },
     node: { value: null, writable: true },
+    analyser: { value: null, writable: true },
     analyse: { value: 0, writable: true },
     endian: { value: 0, writable: true },
     sampleRate: { value: 0, writable: true },
@@ -313,6 +314,10 @@ export function CorePlayer() {
               this.mixer.bufferSize
             );
           }
+
+          this.analyser = this.context.createAnalyser();
+          this.node.connect(this.analyser);
+
           this.node.onaudioprocess = this.callback;
         }
 

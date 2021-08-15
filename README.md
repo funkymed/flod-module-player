@@ -29,8 +29,8 @@ npm install funkymed-flod-module-player
 #### Load a module
 
 ```javascript
-import FlodPlayer from "funkymed-flod-module-player/FlodPlayer";
-import ajaxLoader from "funkymed-flod-module-player/ajaxLoader";
+import FlodPlayer from "funkymed-flod-module-player/src/FlodPlayer";
+import ajaxLoader from "funkymed-flod-module-player/src/ajaxLoader";
 
 function onModuleProgress(e) {
   if (e.lengthComputable) {
@@ -52,20 +52,10 @@ function onModuleLoaded(bytes) {
 ajaxLoader("mymod.xm", onModuleLoaded, onModuleProgress);
 ```
 
-#### Create audiocontext analyser
+#### More
 
 ```javascript
-let player = null;
-let analyser = null;
-function onModuleLoaded(bytes) {
-  if (player) {
-    player.stop();
-  }
-  player = FlodPlayer.load(bytes);
-  player.loopSong = true;
-  player.play();
-
-  analyser = player.context.createAnalyser();
-  player.node.connect(analyser);
-}
+const title = player.title; // the title of the module
+player.stop(); //stop the module
+const analyser = player.analyser; // audio context analyser
 ```

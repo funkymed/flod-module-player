@@ -251,4 +251,4 @@ var SOUNDTRACKER = 0,
   ];
 
 const FlodPlayer = _FileLoader();
-export default FloadPlayer;
+export default FlodPlayer;

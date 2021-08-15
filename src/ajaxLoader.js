@@ -1,4 +1,4 @@
-export function ajaxLoader(url, onLoaded, onProgress) {
+export default function ajaxLoader(url, onLoaded, onProgress) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.responseType = "arraybuffer";
